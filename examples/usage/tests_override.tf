@@ -2,9 +2,10 @@
 # Not needed to use this example.
 terraform {
   # add all providers used in the module to run tests
-  #required_providers {
-  #  random = { source = "hashicorp/random" }
-  #}
+  required_providers {
+    azurerm = { source = "hashicorp/azurerm" }
+    random  = { source = "hashicorp/random" }
+  }
 }
 
 module "example" { source = "../.." }
